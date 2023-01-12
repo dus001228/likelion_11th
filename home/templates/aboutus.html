@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block style %}
+
+<link href="{% static 'css/History.css' %}" rel="stylesheet" />
+
+{% endblock %}
+
+
+
+
+{% block content %}
+  <!-- ======= Menu Section ======= -->
+  <section id="menu" class="menu"  style="margin-top: 50px;">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2>About us</h2>
+      </div>
+
+      <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+        <li class="nav-item">
+          <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+            <h4>Introduce</h4>
+          </a>
+
+        </li><!-- End tab nav item -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+            <h4>History</h4>
+          </a><!-- End tab nav item -->
+
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
+            <h4>Curriculum</h4>
+          </a>
+        </li><!-- End tab nav item -->
+
+      </ul>
+
+      <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+        <div class="tab-pane fade active show" id="menu-starters">
+          <section class="resume-section" id="experience">
+            <div class="resume-section-content">
+              <h2 class="mb-5">Introduction</h2>
+              <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                  <h3 class="mb-0">Oh yea chan</h3>
+                  <div class="subheading mb-3">11기 대표 오예찬</div>
+                  <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the
+                    day, going forward, a new normal that has evolved from generation X is on the runway heading towards
+                    a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for
+                    offshoring.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">December 2000 - 28</span></div>
+              </div>
+              <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                  <h3 class="mb-0">JUNO SHON</h3>
+                  <div class="subheading mb-3">11기 운영진 손준호</div>
+                  <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override
+                    the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the
+                    information highway will close the loop on focusing solely on the bottom line.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">March 2000 - 17</span></div>
+              </div>
+              <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                  <h3 class="mb-0">JU CHAN KIM</h3>
+                  <div class="subheading mb-3">11기 운영진 김주찬</div>
+                  <p>Podcasting operational change management inside of workflows to establish a framework. Taking
+                    seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball
+                    while performing a deep dive on the start-up mentality to derive convergence on cross-platform
+                    integration.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">March 1999 - 3</span></div>
+              </div>
+              <div class="d-flex flex-column flex-md-row justify-content-between">
+                <div class="flex-grow-1">
+                  <h3 class="mb-0">YEONG JAE LEE</h3>
+                  <div class="subheading mb-3">11기 운영진 이영재</div>
+                  <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
+                    procrastinate B2C users after installed base benefits. Dramatically visualize customer directed
+                    convergence without revolutionary ROI.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">January 2000 - 14</span></div>
+              </div>
+            </div>
+          </section>
+
+        </div><!-- End Starter Menu Content -->
+
+        <div class="tab-pane fade" id="menu-breakfast">
+          <section class="resume-section" id="experience">
+            <div class="resume-section-content">
+              <div style="text-align: left; font-size: 50px; margin-left: 10%; font-weight: 100;">10기 history</div>
+              <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                  <div class="history-item">
+                    <div class="left">
+                      <div class="history-item-text-1">3월 ~ 6월</div>
+                    </div>
+                    <div class="right">
+                      <div class="history-item-text-1">스터디 진행</div>
+                      <div class="history-item-text-2">열심히 열심히</div>
+                    </div>
+                  </div>
+        
+                  <div class="history-item">
+                    <div class="left">
+                      <div class="history-item-text-1">7월</div>
+                    </div>
+                    <div class="right">
+                      <div class="history-item-text-1">아이디어톤</div>
+                      <div class="history-item-text-2">파이팅 파이팅</div>
+                      <img style="
+                              border: 3px solid gold;
+                              border-radius: 7px;
+                              -moz-border-radius: 7px;
+                              -khtml-border-radius: 7px;
+                              -webkit-border-radius: 7px;
+                              " src="{% static 'img/아이디어톤.png' %}" width="375" hight="250">
+                    </div>
+                  </div>
+                  <div class="history-item">
+                    <div class="left">
+                      <div class="history-item-text-1">8월</div>
+                    </div>
+                    <div class="right">
+                      <div class="history-item-text-1">중앙해커톤</div>
+                      <div class="history-item-text-2">재밌게 재밌게</div>
+                      <img style="
+                              border: 3px solid gold;
+                              border-radius: 7px;
+                              -moz-border-radius: 7px;
+                              -khtml-border-radius: 7px;
+                              -webkit-border-radius: 7px;
+                              " src="{% static 'img/중앙해커톤.jpg' %}" width="375" hight="250">
+                    </div>
+                  </div>
+                  <div class="history-item">
+                    <div class="left">
+                      <div class="history-item-text-1">8월</div>
+                    </div>
+                    <div class="right">
+                      <div class="history-item-text-1">넥스 MOD해커톤</div>
+                      <div class="history-item-text-2">최우수상 수상</div>
+                      <img style="
+                              border: 3px solid gold;
+                              border-radius: 7px;
+                              -moz-border-radius: 7px;
+                              -khtml-border-radius: 7px;
+                              -webkit-border-radius: 7px;
+                              " src="{% static 'img/mod해커톤.jpg' %}" width="375" hight="250">
+                    </div>
+                  </div>
+                  <div class="history-item">
+                    <div class="left">
+                      <div class="history-item-text-1">11월</div>
+                    </div>
+                    <div class="right">
+                      <div class="history-item-text-1">충청지역 연합 해커톤</div>
+                      <div class="history-item-text-2">지역사회 문제 부문 수상</div>
+                      <img style="
+                          border: 3px solid gold;
+                          border-radius: 7px;
+                          -moz-border-radius: 7px;
+                          -khtml-border-radius: 7px;
+                          -webkit-border-radius: 7px;
+                          " src="{% static 'img/충청톤.jpg' %}" width="375" hight="250">
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </section>
+        </div>
+
+
+
+
+        <div class="PagenateList d-flex m-4">
+        </div><!-- End Breakfast Menu Content -->
+
+        <div class="tab-pane fade" id="menu-lunch">
+
+          커리큘럼 내용
+
+        </div><!-- End Lunch Menu Content -->
+
+      </div>
+
+    </div>
+  </section><!-- End Menu Section -->
+
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/History.js' %}"></script>
+{% endblock %}

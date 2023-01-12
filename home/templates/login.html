@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+    <head>
+        <title>LIKE-LION X HBNU</title>
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="form-wrap">
+                사진칸
+              
+                <form id="login" class="input-group" method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    {% include 'form_errors.html' %}
+                    <input type="text"  name="username" id="username" class="input-field" placeholder="운영진으로부터 발급받은 ID 사용" required>
+                    <input type="password" name="password" id="password" class="input-field" placeholder="운영진으로부터 발급받은 PW 사용" required>
+                    <input type="submit" class="submit"value="로그인">
+                </form>
+               
+            </div>
+        </div>
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+            
+            
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0";
+            }
+
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+        </script>
+    </body>
+</html>
+<!--
+    <button type="button" class="togglebtn" onclick="register()">REGISTER</button>
+<form id="register" action="" class="input-group">
+    <input type="text" class="input-field" placeholder="User name or Email" required>
+    <input type="email" class="input-field" placeholder="Your Email" required>
+    <input type="password" class="input-field" placeholder="Enter Password" required>
+    <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
+    <button class="submit">REGISTER</button>
+</form>
+-->
