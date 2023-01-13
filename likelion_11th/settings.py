@@ -27,7 +27,8 @@ DEBUG = True # 배포 세팅1. 디버그모드를 꺼야 배포 가능!
 
 # 배포 세팅2. 내 아이디
 ALLOWED_HOSTS = [
-    'localhost'
+    'localhost',
+    '127.0.0.1'
 ]
 
 
@@ -125,5 +126,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-LOGIN_REDIRECT_URL = ''
-LOGOUT_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
