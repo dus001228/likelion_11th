@@ -1,3 +1,5 @@
+
+
 """
 Django settings for likelion_11th project.
 
@@ -79,9 +81,18 @@ WSGI_APPLICATION = 'likelion_11th.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'zevejyrf0hxv4zkk',
+        'USER': 'q38yp8gs6j2lbg7n',
+        'PASSWORD': 'r0c6097jwiehxgr1',
+        'HOST': 'jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        'PORT': '3306'
     }
 }
 
