@@ -7,5 +7,8 @@ def home(request):
 def aboutus(request):
     return render(request, 'aboutus.html')
 
+def joinus(request):
+    return render(request, 'joinus.html')
+
 def login(request):
     return render(request, 'login.html')
