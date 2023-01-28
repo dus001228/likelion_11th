@@ -1,50 +1,56 @@
 {% load static %}
-<html>
-    <head>
-        <title>LIKE-LION X HBNU</title>
-        <link rel="stylesheet" href="{% static 'css/login.css' %}">
-    </head>
-    <body>
-        <div class="wrap">
-            <div class="form-wrap">
-                <img src="{% static 'img/학교.jpeg' %}" width="375" hight="250">
-                <form id="login" class="input-group" method="post" action="{% url 'login' %}">
-                    {% csrf_token %}
-                    {% include 'form_errors.html' %}
-                    <input type="text"  name="username" id="username" class="input-field" placeholder="운영진으로부터 발급받은 ID 사용" required>
-                    <input type="password" name="password" id="password" class="input-field" placeholder="운영진으로부터 발급받은 PW 사용" required>
-                    <input type="submit" class="submit"value="로그인">
-                </form>
-               
-            </div>
-        </div>
-        <script>
-            var x = document.getElementById("login");
-            var y = document.getElementById("register");
-            var z = document.getElementById("btn");
-            
-            
-            function login(){
-                x.style.left = "50px";
-                y.style.left = "450px";
-                z.style.left = "0";
-            }
-
-            function register(){
-                x.style.left = "-400px";
-                y.style.left = "50px";
-                z.style.left = "110px";
-            }
-        </script>
-    </body>
-</html>
-<!--
-    <button type="button" class="togglebtn" onclick="register()">REGISTER</button>
-<form id="register" action="" class="input-group">
-    <input type="text" class="input-field" placeholder="User name or Email" required>
-    <input type="email" class="input-field" placeholder="Your Email" required>
-    <input type="password" class="input-field" placeholder="Enter Password" required>
-    <input type="checkbox" class="checkbox"><span>Terms and conditions</span>
-    <button class="submit">REGISTER</button>
-</form>
--->
+<!doctype HTML>
+<head>
+	<meta charset="UTF-8">
+	<title>네이버 로그인</title>
+	<link href="{% static 'css/login.css' %}" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="main-container">
+		<div class="main-wrap">
+		<header>
+			<div class="sel-lang-wrap">
+				
+			</div>
+			 <div class="logo-wrap">
+				<img src="{% static 'img/멋로고.png' %}" style="width: auto;">
+			</div> 
+			
+		</header>
+		<section class="login-input-section-wrap">
+			<form  method="post" action="{% url 'login' %}">
+				{% csrf_token %}
+                {% include 'form_errors.html' %}
+				<div class="login-input-wrap">	
+					<input type="text"  name="username" id="username" placeholder="운영진으로부터 발급받은 ID 사용" type="text"></input>
+				</div>
+				<div class="login-input-wrap password-wrap">	
+					<input type="password" name="password" id="password" placeholder="운영진으로부터 발급받은 패스워드 사용" type="password"></input>
+				</div>
+				<div class="login-button-wrap">
+					<button type="submit" class="submit">Sign in</button>
+				</div>
+				<div class="login-stay-sign-in">
+					<i class="far fa-check-circle"></i>
+					<span>For got your ID?</span>
+				</div>
+			</form>
+		</section>
+		<!-- <section class="Easy-sgin-in-wrap">
+			<h2>Easier sign in</h2>
+			<ul class="sign-button-list">
+				<li><button><i class="fas fa-qrcode"></i><span>Sign in with QR code</span></button></li>
+				<li><button><i class="fab fa-facebook-square"></i><span>Facebook</span></button></li>
+				<li><button><i class="fab fa-line"></i><span>line</span></button></li>
+			</ul>
+			<p class="forget-msg">Forgot your Username or Password? | Sign up</p>
+		</section> -->
+		<footer>
+			<div class="copyright-wrap">
+			<span>	<img src="{% static 'img/멋로고.png' %}" style="width:auto;"> Copyright © LikeLion X HBNU Corp. All Rights Reserved.</span>
+			</div>
+		</footer>
+		</div>
+	</div>
+</body>
