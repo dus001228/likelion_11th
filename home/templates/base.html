@@ -40,18 +40,13 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'joinus' %}">Join Us</a></li>
 
                     {% if request.user.is_authenticated %}
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">{{ request.user.username }}님 로그아웃 <div class="container h-100"></div>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">{{ request.user.username }}님 로그아웃 </a></li>
                     {% else %}
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">Login <div class="container h-100">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">Login </a></li>
                     {% endif %}
 			
-				</div>
+				</ul>
 			</div>
-		</div>
-	</div></a></li>
-                   
-                </ul>
-            </div>
         </nav>
 {% block content %}
 
