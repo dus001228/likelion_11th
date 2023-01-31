@@ -1,10 +1,42 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block style %}
 <style>
-    img { display:block; margin:auto;}
+#coming {
+    display:block;
+    margin:auto;
+    width: 30%;
+    height: "auto";
+}
+#date{
+    text-align: center; 
+    font-family: 'Happiness-Sans-Title'; 
+    font-size: xx-large;
+}
+@font-face {
+    font-family: 'Happiness-Sans-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@media (max-width:767px){
+    #coming {
+        display:block;
+        margin:auto;
+        width: 60%;
+        height: "auto";
+    }
+    #date{
+        text-align: center; 
+        font-family: 'Happiness-Sans-Title'; 
+        font-size: x-large;
+    }
+}
 </style>
+
+
 {% endblock %}
 
 {% block content %}
@@ -31,7 +63,10 @@
       </div>
 </div>
 {% endif %}
-<div style="min-height: 100%;">
-    <img src="{% static 'img/coming_soon.png' %}"alt="..." />
+<div style="min-height: 100%">
+    <img id = "coming" class ="mt-5" src="{% static 'img/coming_soon.png' %}"/>
+    <div id = "date" class="mt-5">
+        <P>11기 아기사자 모집은 2월 20일 00:00 부로 시작될 예정입니다.</P>
+    </div>
 </div>
 {% endblock %}
