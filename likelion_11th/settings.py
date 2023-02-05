@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@-6ps%&ry3-!a5u4u98r^d4s59(3ltcf8wsb0pbblv&1dzjtpx'
+SECRET_KEY = 'secret'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -78,21 +78,7 @@ WSGI_APPLICATION = 'likelion_11th.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'zevejyrf0hxv4zkk',
-        'USER': 'q38yp8gs6j2lbg7n',
-        'PASSWORD': 'r0c6097jwiehxgr1',
-        'HOST': 'jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        'PORT': '3306'
-    }
-}
+DATABASES = { secret }
 
 
 # Password validation
