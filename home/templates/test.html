@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+<style>
+    .faq{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    .faq > li{
+    padding: 8px;
+    box-sizing: border-box;
+    }
+
+    .faq > li:nth-child(n+2){ 
+    border-top: 1px dotted #aaa6;
+    }
+
+    .faq input {
+    display: none;
+    }
+
+    /* 질문영역 */
+    .faq label { 
+    display: -webkit-box; 
+    color: #000;
+    font-size: 15px;
+    height: 50px
+    margin: 15px 10px 0px 10px;
+    cursor: pointer;
+    }
+
+    /* 질문영역 check 이전 */
+    .faq label::after {
+    content: "▽";
+    display:block;
+    position: sticky;
+    margin-left: auto;
+    }
+
+    /* 질문영역 check 이후 */
+    .faq input:checked + label::after { 
+    content: "ㅡ";
+    display:block;
+    position: sticky;
+    margin-left: auto;
+    }
+
+    /* 답변영역 */
+    .faq div { 
+    display: none;
+    color: #000;
+    background-color: rgb(241, 243, 246)
+    font-size: 13px;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    }
+
+    .faq input:checked + label + div { 
+    display: block;
+    }
+
+    .spacing {
+        text-indent: 1.2em;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div style="min-height: 100%;">
+    <ul class="faq">
+        <li>
+            <input type="checkbox" id="faq-1">
+            <label for="faq-1">질문1</label>
+            <div>
+                <p class="spacing">답변1</p>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="faq-2">
+            <label for="faq-2">질문2</label>
+            <div>
+                <p class="spacing">답변2</p>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="faq-3">
+            <label for="faq-3">질문3</label>
+            <div>
+                <p class="spacing">답변3</p>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="faq-4">
+            <label for="faq-4">질문4</label>
+            <div>
+                <p class="spacing">답변4</p>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="faq-5">
+            <label for="faq-5">질문5</label>
+            <div>
+                <p class="spacing">답변5</p>
+            </div>
+        </li>
+    </ul>    
+</div>
+
+{% else %}
+
+<div style="min-height: 100%;">
+    로그인 후 접근해주세용
+</div>
+
+{% endif %}
+
+
+
+{% endblock %}
