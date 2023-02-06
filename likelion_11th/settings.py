@@ -78,12 +78,7 @@ WSGI_APPLICATION = 'likelion_11th.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-
+DATABASES = { 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'zevejyrf0hxv4zkk',
@@ -91,8 +86,7 @@ DATABASES = {
         'PASSWORD': 'r0c6097jwiehxgr1',
         'HOST': 'jsk3f4rbvp8ayd7w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         'PORT': '3306'
-    }
-}
+    } }
 
 
 # Password validation
@@ -131,6 +125,7 @@ USE_TZ = False
 
 STATIC_URL = 'static/'
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -138,3 +133,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+CSRF_TRUSTED_ORIGINS = ['http://hanbat-likelion.kr']
