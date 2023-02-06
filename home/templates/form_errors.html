@@ -3,7 +3,7 @@
 {% for error in field.errors %}
 <!-- 필드 오류를 출력한다. -->
 <div>
-  <strong>{{ field.label }}</strong><br>
+  <strong>{{ field.label }}</strong>
   {{ error }}
 </div>
 {% endfor %}
@@ -11,7 +11,7 @@
 {% for error in form.non_field_errors %}
 <!-- 넌필드 오류를 출력한다. -->
 <div>
-  <strong>{{ error }}</strong><br>
+  <strong>올바른 아이디/비밀번호를 입력하세요.<br>두 필드 모두 대문자와 소문자를 구별합니다.</strong>
 </div>
 {% endfor %}
 {% endif %}
