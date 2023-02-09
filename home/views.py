@@ -10,6 +10,9 @@ def aboutus(request):
 def joinus(request):
     return render(request, 'joinus.html')
 
+def joinus_tmp(request):
+    return render(request, 'joinus_tmp.html')
+
 def login(request):
     return render(request, 'login.html')
 

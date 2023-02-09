@@ -24,6 +24,7 @@ urlpatterns = [
     path('', home.views.home, name=''),
     path('aboutus/', home.views.aboutus, name='aboutus'),
     path('joinus/', home.views.joinus, name='joinus'),
+    path('joinus_tmp/', home.views.joinus_tmp, name='joinus_tmp'),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('test/', home.views.test, name='test'),
