@@ -8,13 +8,12 @@ def aboutus(request):
     return render(request, 'aboutus.html')
 
 def joinus(request):
+    print("지원 희망자 띠용")
     return render(request, 'joinus.html')
-
-def joinus_tmp(request):
-    return render(request, 'joinus_tmp.html')
 
 def login(request):
     return render(request, 'login.html')
 
 def test(request):
     return render(request, 'test.html')
+
